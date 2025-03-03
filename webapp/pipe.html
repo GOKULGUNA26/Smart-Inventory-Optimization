@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipeline Planning</title>
+    <link rel="stylesheet" href="pipe.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar with Nokia logo and title -->
+        <nav class="navbar">
+            <button class="back-button" onclick="goBack()">&#8592; </button>
+            <div class="logo">
+                <img src="nokia logo.png" alt="Nokia" class="logo-img">
+            </div>
+            <h1 class="page-title">Pipeline Planning</h1>
+            <div class="menu-icon">
+                <i class="bx bx-menu"></i>
+            </div>
+        </nav>
+
+        <!-- Main content area -->
+        <div class="main-content">
+            <!-- Machine status section -->
+            <div class="content-box">
+                <span class="loading">Number of Machines Working: <span id="machine-count">...</span></span>
+                <i class='bx bx-right-arrow-alt'></i>
+            </div>
+
+            <!-- User Info -->
+            <div class="info-box">
+                <div class="user-info">
+                    <span>User ID: 11458</span>
+                    <span>Abame</span>
+                </div>
+                <!-- Machine detail text -->
+                <p>Machine efficiency is being monitored for optimal performance in the pipeline planning process.</p>
+            </div>
+
+            <!-- Additional box for more content or machines -->
+            <div class="extra-box">
+                <p id="machine-status">Working on allocating resources to available machines...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to dynamically update the machine count -->
+    <script>
+        // Simulating machine working status
+        const machineCountElement = document.getElementById('machine-count');
+        const machineStatusElement = document.getElementById('machine-status');
+
+        // Example function to simulate updating machine count
+        function updateMachineStatus() {
+            const workingMachines = 5;  // You can dynamically fetch this data from a server
+            machineCountElement.textContent = workingMachines;
+
+            if (workingMachines > 0) {
+                machineStatusElement.textContent = `${workingMachines} machines are currently operational and performing optimally.`;
+            } else {
+                machineStatusElement.textContent = "No machines are operational at the moment.";
+            }
+        }
+        function goBack() {
+            window.history.back();
+        }
+
+        // Simulate update after loading the page
+        window.onload = updateMachineStatus;
+    </script>
+</body>
+</html>
+

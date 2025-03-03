@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nokia Orders Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #e5ecf4; /* Softer background */
+            color: #333; /* Text color */
+            font-size: 16px;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white; /* Navbar background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+        .logo-img {
+            margin-left: -870px;
+            height: 45px; /* Logo size */
+            width: auto;
+        }
+        .menu-icon {
+            font-size: 2rem;
+            
+            
+        }
+        .back-button {
+            background-color: #007bff; /* Button color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 15px; /* Padding */
+            cursor: pointer; /* Pointer cursor */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        .back-button:hover {
+            background-color: #0056b3; /* Darker color on hover */
+        }
+
+        /* Breadcrumb Styles */
+        .breadcrumb {
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        .breadcrumb a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header Styles */
+        .orders-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Search Bar Styles */
+        .search-bar {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .search-bar input {
+            padding: 5px;
+            font-size: 14px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            transition: border 0.3s;
+        }
+        .search-bar input:focus {
+            border-color: #007bff; /* Highlight border on focus */
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            transition: background-color 0.3s; /* Transition for hover effect */
+        }
+        th {
+            background-color: #f2f2f2;
+            color: black;
+        }
+        tr:hover {
+            background-color: #f9f9f9; /* Row hover effect */
+        }
+
+        /* Button Styles */
+        .view-button {
+            background-color: #1E90FF;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        .view-button:hover {
+            background-color: #187bcd; /* Darker color on hover */
+        }
+
+        /* Animation Styles */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <section class="Product" id="Product">
+        <!-- Navbar Section -->
+        <div class="navbar">
+            <button class="back-button" onclick="goBack()">&#8592; </button>
+            <img src="nokia logo.png" alt="Nokia Logo" class="logo-img">
+            <div class="menu-icon">ORDERS</div>
+        </div>
+        
+        <div class="container fade-in">
+            <!-- Breadcrumb Section -->
+            <div class="breadcrumb">
+                <a href="#">Home</a> > Orders
+            </div>
+
+            <!-- Orders Header -->
+            <div class="orders-header">Orders</div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
+
+            <!-- Orders Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Cust Name</th>
+                        <th>D.O.P</th>
+                        <th>Category</th>
+                        <th>D.O.D</th>
+                        <th>Product List</th>
+                        <th>Total Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample Data Rows -->
+                    <tr>
+                        <td>1</td>
+                        <td>A</td>
+                        <td>01/01/2023</td>
+                        <td>Electronics</td>
+                        <td>01/10/2023</td>
+                        <td><a href="product.html" class="view-button">View</a></td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>B</td>
+                        <td>02/01/2023</td>
+                        <td>Accessories</td>
+                        <td>02/10/2023</td>
+                        <td><button class="view-button">View</button></td>
+                        <td>$150</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>C</td>
+                        <td>03/01/2023</td>
+                        <td>Gadgets</td>
+                        <td>03/10/2023</td>
+                        <td><button class="view-button">View</button></td>
+                        <td>$200</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        // Optional: Add any additional JavaScript functionalities here
+    </script>
+</body>
+</html>

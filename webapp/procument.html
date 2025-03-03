@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procurement Analysis</title>
+    <link rel="stylesheet" href="procument.css">
+</head>
+<body>
+    <div class="navbar">
+        <button id="goBackBtn" onclick="goBack()">&#8592; </button>
+        <div class="logo">
+            <img src="nokia logo.png" alt="Nokia Logo" class="logo-img">
+        </div>
+        <div class="dashboard-title">PRODUCT LIST</div>
+    </div>
+    
+
+        <div class="breadcrumb">
+            <a href="#">Home</a> > Procurement Analysis
+        </div>
+
+        <div class="procurement-header">
+            <h1>Procurement Analysis</h1>
+            <p>Dashboard > Alerts and Stock Management</p>
+        </div>
+
+        <!-- Alerts Section -->
+        <div class="alerts-container">
+            <div class="alerts-header">
+                <h2>Alerts</h2>
+            </div>
+            <div class="alert-item">
+                <span>Another board out of stock — Sys #123456 — stock_ID: #45536</span>
+                <button class="close-btn">X</button>
+            </div>
+            <div class="alert-item">
+                <span>Micro chips out of stock — Sys #123456 — stock_ID: #45645</span>
+                <button class="close-btn">X</button>
+            </div>
+            <div class="alert-item">
+                <span>Wires out of stock — Sys #123456 — stock_ID: #65435</span>
+                <button class="close-btn">X</button>
+            </div>
+            <div class="alert-item">
+                <span>Bolts and nuts out of stock — Sys #123456 — stock_ID: #12356</span>
+                <button class="close-btn">X</button>
+            </div>
+        </div>
+
+        <!-- Filters and Search -->
+        <div class="filter-section">
+            <select id="product-select">
+                <option>Select Product</option>
+                <option>Product 1</option>
+                <option>Product 2</option>
+                <option>Product 3</option>
+            </select>
+
+            <select id="type-select">
+                <option>Select Type</option>
+                <option>Type 1</option>
+                <option>Type 2</option>
+                <option>Type 3</option>
+            </select>
+
+            <button id="search-btn">Search</button>
+        </div>
+
+        <!-- Stock Table -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Stock_ID</th>
+                        <th>Resource</th>
+                        <th>Required Qty</th>
+                        <th>Available Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="stock-data">
+                    <tr>
+                        <td>123456</td>
+                        <td>Board</td>
+                        <td>500</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td>654321</td>
+                        <td>Microchip</td>
+                        <td>1000</td>
+                        <td>800</td>
+                    </tr>
+                    <!-- More stock rows can go here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="procument.js"></script>
+</body>
+</html>

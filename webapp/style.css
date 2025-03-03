@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e5ecf4; /* Softer background */
+    color: #333; /* Text color */
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: -20px;
+    margin-right: -50px;
+    margin-left: -50px;
+    background-color: white; /* Greenish-blue background */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.back-button {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+
+.logo-img {
+    height: 45px; /* Adjust this based on your logo's size */
+    width: auto;
+}
+
+.dashboard-title {
+    font-size: 22px;
+    color: black;
+}
+
+.services {
+    margin-top: 40px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    grid-gap: 20px;
+}
+
+.services-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    height: 320px; /* Adjust box height for images */
+}
+
+.services-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: blue;
+    color: #fff;
+}
+
+.service-img {
+    width: 100%; /* Image takes up full width */
+    height: 200px; /* Adjust height based on the image */
+    object-fit: cover; /* Makes sure the image covers the box without distorting */
+    border-radius: 8px;
+}
+
+.services-box p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 15px; /* Add space between the image and text */
+}
+
+@keyframes box-pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.services-box.pop {
+    animation: box-pop 0.6s ease;
+}

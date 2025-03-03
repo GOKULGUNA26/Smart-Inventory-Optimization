@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - Product List</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <button class="back-button" onclick="goBack()">&#8592; </button>
+        <div class="logo">
+            <img src="nokia logo.png" alt="Nokia Logo" class="logo-img">
+        </div>
+        <div class="dashboard-title">PRODUCT LIST</div>
+    </div>
+    
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb" id="breadcrumb">
+            <a href="#" onclick="navigate('home')">Home</a>
+            > Orders ><a href="#Product">Product list</a>
+        </div>
+
+        <!-- Alerts Section -->
+        <div class="alerts-section" id="alerts-section">
+            <div class="alert-item">
+                <span>Sample alert message</span>
+                <button class="close-btn" onclick="closeAlert(this)">Close</button>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Product ID</th>
+                        <th onclick="sortTable(1)">Product Name</th>
+                        <th onclick="sortTable(2)">Unit Price</th>
+                        <th onclick="sortTable(3)">Quantity</th>
+                        <th onclick="sortTable(4)">Amount</th>
+                        <th>Start Manufacture</th>
+                    </tr>
+                </thead>
+                <tbody id="product-table">
+                    <!-- Sample row -->
+                    <tr>
+                        <td>101</td>
+                        <td>Product A</td>
+                        <td>$50</td>
+                        <td>10</td>
+                        <td>$500</td>
+                        <td><button class="proceed-button">Proceed</button></td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Product B</td>
+                        <td>$75</td>
+                        <td>8</td>
+                        <td>$600</td>
+                        <td><button class="proceed-button">Proceed</button></td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>Product C</td>
+                        <td>$30</td>
+                        <td>15</td>
+                        <td>$450</td>
+                        <td><button class="proceed-button">Proceed</button></td>
+                    </tr>
+                    <!-- Add more rows as necessary -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="product.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    
+</body>
+</html>

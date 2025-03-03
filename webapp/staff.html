@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white; /* Navbar background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+        .logo-img {
+            margin-left: -870px;
+            height: 45px; /* Logo size */
+            width: auto;
+        }
+        .menu-icon {
+            font-size: 2rem;
+            
+            
+        }
+        .back-button {
+            background-color: #007bff; /* Button color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 15px; /* Padding */
+            cursor: pointer; /* Pointer cursor */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        .back-button:hover {
+            background-color: #0056b3; /* Darker color on hover */
+        }
+
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #e6e6e6;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .header img {
+            width: 50px;
+        }
+
+        .header h1 {
+            font-size: 1.5em;
+        }
+
+        .header .search {
+            position: relative;
+        }
+
+        .header .search input {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .main-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .section {
+            width: 30%;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .section label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .section input, .section select {
+            width: 100%;
+            padding: 7px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .report-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .report-section input {
+            margin-bottom: 10px;
+        }
+
+        .table-container {
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #e6e6e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <button class="back-button" onclick="goBack()">&#8592; </button>
+        <img src="nokia logo.png" alt="Nokia Logo" class="logo-img">
+        <div class="menu-icon">STAFF MANAGMENT</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <img src="download.jpeg" alt="Logo">
+            <h1>Staff Management</h1>
+            <div class="search">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+
+        <div class="main-section">
+            <div class="section">
+                <h2>Staff Management</h2>
+                <label>Attendance</label>
+                <input type="text" placeholder="Attendance">
+                <label>Leave Request</label>
+                <input type="date">
+                <input type="text" placeholder="Reason">
+                <label>Performance Review</label>
+                <input type="text" placeholder="Performance Review">
+                <label>Report</label>
+                <input type="text" placeholder="Report">
+            </div>
+
+            <div class="section">
+                <h2>Leave Request</h2>
+                <label>Type</label>
+                <select>
+                    <option value="sick">Sick Leave</option>
+                    <option value="casual">Casual Leave</option>
+                    <option value="annual">Annual Leave</option>
+                </select>
+                <label>Dates</label>
+                <input type="date">
+                <label>Reason</label>
+                <input type="text" placeholder="Reason">
+                <label>Status</label>
+                <input type="text" placeholder="Status">
+            </div>
+
+            <div class="section report-section">
+                <h2>Report</h2>
+                <label>Attendance</label>
+                <input type="text" placeholder="Attendance">
+                <label>Leave Statistics</label>
+                <input type="text" placeholder="Leave Statistics">
+                <label>Performance Summary</label>
+                <input type="text" placeholder="Performance Summary">
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Staff_ID</th>
+                        <th>Staff_Name</th>
+                        <th>In pass</th>
+                        <th>Out pass</th>
+                        <th>Contact</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>John Doe</td>
+                        <td>9:00 AM</td>
+                        <td>6:00 PM</td>
+                        <td>123-456-789</td>
+                        <td>HR</td>
+                        <td>$3000</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Jane Smith</td>
+                        <td>9:00 AM</td>
+                        <td>6:00 PM</td>
+                        <td>987-654-321</td>
+                        <td>IT</td>
+                        <td>$3200</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+         function goBack() {
+            window.history.back();
+        }
+        
+    </script>
+
+</body>
+</html>
+
